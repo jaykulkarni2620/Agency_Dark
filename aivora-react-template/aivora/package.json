@@ -1,6 +1,7 @@
 {
   "name": "aivora-react-template",
   "version": "1.0.0",
+  "homepage": "https://minexx.in",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
