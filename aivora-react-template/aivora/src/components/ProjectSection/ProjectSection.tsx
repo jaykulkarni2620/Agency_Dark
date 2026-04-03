@@ -3,10 +3,10 @@ import React, { useEffect } from "react";
 // ✅ Import images
 import projectBg from "../../images/bg/project-bg.png";
 import gifRound from "../../images/icon/b10c3e43e836d32554bf.gif";
-import projectImg01 from "../../images/project/project-img01.jpg";
-import projectImg02 from "../../images/project/project-img02.jpg";
-import projectImg03 from "../../images/project/project-img03.jpg";
-import projectImg04 from "../../images/project/project-img04.jpg";
+import projectImg01 from "../../images/project/web1.png";
+import projectImg02 from "../../images/project/web2.png";
+import projectImg03 from "../../images/project/web3.png";
+import projectImg04 from "../../images/project/web4.png";
 
 // ✅ Import icons
 import icon01 from "../../images/icon/project-icon01.svg";
@@ -80,9 +80,9 @@ const ProjectSection: React.FC = () => {
         <div className="sec-title custom-sec-title xb-sec-padding text-center">
           <span className="sub-title">Our Projects</span>
           <h2 className="title">
-            <span className="round-img">
+            {/* <span className="round-img">
               <img src={gifRound} alt="animation" />
-            </span>{" "}
+            </span>{" "} */}
             See the results that reflect of our hard work
           </h2>
           <div className="xb-heading-btn d-inline">

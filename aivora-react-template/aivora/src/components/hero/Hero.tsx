@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // Image imports (using your provided path)
 import heroBg from "../../images/bg/hero_bg.png";
 import heroIcon from "../../images/icon/animated-gif02.gif";
-import heroIcon2 from "../../images/icon/diamond-icon02.gif";
+import heroIcon2 from "../../images/icon/Girl_lap.png";
 import featureIcon1 from "../../images/icon/feature-icon01.svg";
 import featureIcon2 from "../../images/icon/feature-icon02.svg";
 import featureIcon3 from "../../images/icon/feature-icon03.svg";
@@ -19,17 +19,17 @@ const HeroSection: React.FC = () => {
         <div className="row">
           {/* ---------- Left Content ---------- */}
           <div className="col-lg-9 col-md-9">
-            <div className="hero-content">
+            <div className="hero-content pt-4">
               <h2 className="title scale-animation wow">
-              Grow Smarter with Minex
+              We Build Brands That Mean Business
               </h2>
               
               <p className="sub-title scale-animation wow">
-              We help companies like yours get more customers, keep them coming back, and make running the online side of things feel simple instead of stressful.
+                Minexx is a results-driven digital agency helping businesses grow online through sharp strategy, bold creative, and marketing that actually works.
               </p>
               <div className="hero-btn scale-animation wow">
                 <Link className="thm-btn agency-btn" to="/contact">
-                  <span className="text">Talk to Us Today</span>
+                  <span className="text"> Let's Build Together →</span>
                   <span className="arrow">
                     <span className="arrow-icon">
                       <svg
@@ -180,7 +180,7 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/* ---------- Features ---------- */}
-        <div className="row mt-55">
+        <div className="row mt-35">
           <div className="col-lg-4 col-md-6 mt-30">
             <div
               className="xb-feature-item wow fadeInUp"
@@ -192,13 +192,9 @@ const HeroSection: React.FC = () => {
                   <img src={featureIcon1} alt="icon" />
                 </span>
                 <div className="xb-item--holder">
-                  <h2 className="xb-item--title">Track Where Your Growth Is Really Coming From</h2>
+                  <h2 className="xb-item--title">We Say No To Projects We Can't Deliver</h2>
                   <p className="xb-item--content">
-                  (See exactly how your online efforts are paying off)
-
-                  <li>See live updates on website traffic, leads, and sales sources.</li>
-                  <li>Get clear breakdowns that show what's driving growth and what's not.</li>
-                  <li>Spot quick wins or problems before they cost you.</li>
+                  Honest from day one. If it's not the right fit, we'll tell you — because your time and money matter.
                   </p>
                 </div>
               </div>
@@ -216,10 +212,9 @@ const HeroSection: React.FC = () => {
                   <img src={featureIcon2} alt="icon" />
                 </span>
                 <div className="xb-item--holder">
-                  <h2 className="xb-item--title">Integrated AI solutions</h2>
+                  <h2 className="xb-item--title">Our Work Has To Make You Money</h2>
                   <p className="xb-item--content">
-                    No extra tools or plugins needed. Get built-in, scalable AI
-                    from day one.
+                  Pretty websites that don't bring business are useless. Everything we build has a purpose behind it.
                   </p>
                 </div>
               </div>
@@ -237,10 +232,9 @@ const HeroSection: React.FC = () => {
                   <img src={featureIcon3} alt="icon" />
                 </span>
                 <div className="xb-item--holder">
-                  <h2 className="xb-item--title">End-to-end automation</h2>
+                  <h2 className="xb-item--title">You'll Always Know Where Things Stand</h2>
                   <p className="xb-item--content">
-                    Eliminate bottlenecks with intelligent workflows that never
-                    leave you guessing.
+                  Weekly updates, open communication, no radio silence. You're never left wondering what's happening.
                   </p>
                 </div>
               </div>

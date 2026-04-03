@@ -36,9 +36,9 @@ const IndustriesSection: React.FC = () => {
   return (
     <section className="industries bg_img bg-wrap">
       <div className="container">
-        <div className="sec-title sec-title-center text-center mb-50">
+        <div className="sec-title sec-title-center text-center mb-50 mt-60">
           <span className="sub-title mb-15">Industries Served</span>
-          <h2 className="title">Industries we served with AI</h2>
+          <h2 className="title">Industries we served</h2>
         </div>
       </div>
     

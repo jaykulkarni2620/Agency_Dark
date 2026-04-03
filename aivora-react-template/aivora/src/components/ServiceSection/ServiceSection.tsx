@@ -5,12 +5,12 @@ import gif from "../../images/icon/b10c3e43e836d32554bf.gif";
 import arrowIcon from "../../images/icon/rotate-arrow-black.svg";
 
 // Service images
-import img01 from "../../images/service/img01.jpg";
-import img02 from "../../images/service/img02.jpg";
-import img03 from "../../images/service/img03.jpg";
-import img04 from "../../images/service/img04.jpg";
-import img05 from "../../images/service/img05.jpg";
-import img06 from "../../images/service/img06.jpg";
+import img01 from "../../images/service/img01.png";
+import img02 from "../../images/service/img02.png";
+import img03 from "../../images/service/img03.png";
+import img04 from "../../images/service/img04.png";
+import img05 from "../../images/service/img05.png";
+import img06 from "../../images/service/img06.png";
 
 interface ServiceItem {
   id: number;
@@ -23,43 +23,43 @@ interface ServiceItem {
 const services: ServiceItem[] = [
   {
     id: 1,
-    title: "AI SaaS Product",
-    desc: "Use AI to target audiences, personalize campaigns, and analyze data for better engagement and results.",
+    title: "Web Design & Development",
+    desc: "Websites that look sharp, load fast, and turn visitors into customers.",
     img: img01,
     link: "/service-details",
   },
   {
     id: 2,
-    title: "Data Science",
-    desc: "We turn complex data into clear, actionable insights using AI and advanced analytics—empowering smarter decisions.",
+    title: "Social Media Marketing",
+    desc: "We build your presence on the platforms where your customers actually spend their time.",
     img: img02,
     link: "/service-details",
   },
   {
     id: 3,
-    title: "AI Chatbot Virtual",
-    desc: "We create intelligent chatbots and virtual assistants that improve customer support and automate interactions 24/7.",
+    title: "Search Engine Optimization",
+    desc: "Get found on Google by the right people at the right time — without paying for every click.",
     img: img03,
     link: "/service-details",
   },
   {
     id: 4,
-    title: "AI for E-commerce",
-    desc: "We enhance e-commerce with AI-powered, dynamic pricing, and personalized customer experiences.",
+    title: "Paid Advertising",
+    desc: "Run ads on Meta, Google & more that bring in real leads, not just impressions.",
     img: img04,
     link: "/service-details",
   },
   {
     id: 5,
-    title: "AI Consulting",
-    desc: "We guide businesses in adopting AI strategies, optimizing processes, and integrating technologies for lasting success.",
+    title: " Brand Identity & Design",
+    desc: "Logo, colours, fonts, tone — we build brands that people remember and trust.",
     img: img05,
     link: "/service-details",
   },
   {
     id: 6,
-    title: "AI Marketing",
-    desc: "Use AI to target audiences, personalize campaigns, and analyze data for better engagement and results.",
+    title: "Content Creation",
+    desc: "Reels, graphics, blogs, copy — content that connects with your audience and keeps them coming back.",
     img: img06,
     link: "/service-details",
   },
@@ -79,12 +79,10 @@ const ServiceSection: React.FC = () => {
         <div className="row justify-content-center">
           <div className="col-lg-11">
             <div className="sec-title custom-sec-title xb-sec-padding text-center">
-              <span className="sub-title">Our Main Services</span>
+              <span className="sub-title">What We Do</span>
               <h2 className="title">
-                <span className="round-img">
-                  <img src={gif} alt="gif" />
-                </span>{" "}
-                Helping you grow with the power of AI
+               
+                Services That Actually Move Your Business Forward
               </h2>
               <div className="xb-heading-btn d-inline">
                 <Link className="thm-btn agency-btn" to="/service">

@@ -1,0 +1,20 @@
+.xb-about-img-item {
+  text-align: center;
+  margin: 0 20px;
+}
+
+.xb-img-title {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  font-family: inherit; /* uses theme font */
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .xb-img-title {
+    font-size: 16px;
+  }
+}

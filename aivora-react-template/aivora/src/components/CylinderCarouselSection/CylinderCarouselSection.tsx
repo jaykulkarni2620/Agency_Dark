@@ -2,16 +2,31 @@ import React, { useRef, useEffect, useCallback } from "react";
 import "./CylinderCarouselSection.css";
 
 // Default images (use project images; replace with your 1.png–10.png paths if needed)
-import projectImg01 from "../../images/project/project-img01.jpg";
-import projectImg02 from "../../images/project/project-img02.jpg";
-import projectImg03 from "../../images/project/project-img03.jpg";
-import projectImg04 from "../../images/project/project-img04.jpg";
+import projectImg01 from "../../images/project/fashion.png";
+import projectImg02 from "../../images/project/2.png";
+import projectImg03 from "../../images/project/3.png";
+import projectImg04 from "../../images/project/4.png";
+import projectImg05 from "../../images/project/5.png";
+import projectImg06 from "../../images/project/6.png";
+import projectImg07 from "../../images/project/7.png";
+import projectImg09 from "../../images/project/9.png";
+import projectImg10 from "../../images/project/10.png";
+import projectImg11 from "../../images/project/11.png";
+import projectImg12 from "../../images/project/12.png";
 
 const DEFAULT_IMAGES = [
   projectImg01,
   projectImg02,
   projectImg03,
   projectImg04,
+  projectImg04,
+  projectImg05,
+  projectImg06,
+  projectImg07,
+  projectImg09,
+  projectImg10,
+  projectImg11,
+  projectImg12,
 ];
 
 const CARD_WIDTH = 260;
