@@ -20,8 +20,8 @@ const ContactSection: React.FC = () => {
             let client = 0;
 
             const projectInterval = setInterval(() => {
-              project += 1;
-              if (project >= 5) clearInterval(projectInterval);
+              project += 2;
+              if (project >= 1) clearInterval(projectInterval);
               setProjectCount(project);
             }, 200);
 
@@ -55,10 +55,11 @@ const ContactSection: React.FC = () => {
           <div className="col-lg-6 mt-50">
             <div className="xb-content-wrap">
               <div className="sec-title contact-sec-title">
-                <span className="sub-title mb-15">Our Achievements</span>
+                <span className="sub-title mb-15">OUR TRACK RECORD</span>
                 <h2 className="title horizontal-shape">
-                  We are trusted{" "}
-                  <img src={gifShape} alt="animated-shape" /> Minex agency
+                We don't follow trends.
+                We set them.
+                  {/* <img src={gifShape} alt="animated-shape" /> Minex agency */}
                 </h2>
               </div>
 
@@ -67,7 +68,7 @@ const ContactSection: React.FC = () => {
                   <div className="xb-contact-item">
                     <h3 className="xb-item--number">
                       <span className="xbo">{projectCount}</span>
-                      <span className="suffix">K+</span>
+                      <span className="suffix">0+</span>
                     </h3>
                     <p className="xb-item--content">
                       Projects Successfully Delivered
@@ -100,7 +101,7 @@ const ContactSection: React.FC = () => {
           <div className="col-lg-6 mt-50">
             <div className="xb-contact-form xb-border">
               <div className="form-heading text-center mb-30">
-                <h3 className="title">Ready to collaborate with us?</h3>
+                <h3 className="title">Let's work together.</h3>
                 <p className="sub-title">
                   Who knows where a single message might lead you.
                 </p>

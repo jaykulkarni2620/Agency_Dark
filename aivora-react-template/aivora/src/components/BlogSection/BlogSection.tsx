@@ -1,24 +1,37 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import blogBg from "../../images/bg/blog-bg.png";
-import gifShape from "../../images/icon/original-9e54f87f13d.gif";
-
-// Blog images
-import img01 from "../../images/blog/img01.jpg";
-import img02 from "../../images/blog/img02.jpg";
-import img03 from "../../images/blog/img03.jpg";
 
 // Icons
 import icon01 from "../../images/icon/blog-icon01.svg";
 import icon02 from "../../images/icon/blog-icon02.svg";
 
+import {
+  fetchHomeBlogCards,
+  getHomeBlogCardsSync,
+  type HomeBlogCard,
+} from "../../services/blogHomeCards";
+
+const WOW_DELAYS = ["0ms", "150ms", "300ms"] as const;
 
 const BlogSection: React.FC = () => {
+  const [cards, setCards] = useState<HomeBlogCard[]>(() => getHomeBlogCardsSync());
+
   useEffect(() => {
     const bgEl = document.querySelector<HTMLElement>(".blog.bg_img");
     if (bgEl) {
       bgEl.style.backgroundImage = `url(${blogBg})`;
     }
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchHomeBlogCards().then((next) => {
+      if (!cancelled && next.length) setCards(next);
+    });
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   return (
@@ -28,9 +41,9 @@ const BlogSection: React.FC = () => {
           {/* Left Column */}
           <div className="col-lg-4 mt-30">
             <div className="sec-title blog-sec-title mb-70">
-              <span className="sub-title mb-15">Our Latest News</span>
+              <span className="sub-title mb-15">READ OUR BLOG</span>
               <h2 className="title">
-                Our latest news <img src={gifShape} alt="shape" />
+                Our latest news 
               </h2>
             </div>
             <div className="blog-btn">
@@ -172,95 +185,50 @@ const BlogSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column */}
+          {/* Right Column — newest posts first (large + two small) */}
           <div className="col-lg-8 mt-30">
             <div className="row mt-none-30">
-              {/* Large Blog Post */}
-              <div className="col-lg-12 mt-30">
-                <div className="xb-blog-item wow fadeInUp" data-wow-delay="0ms" data-wow-duration="600ms">
-                  <div className="xb-item--inner img-hove-effect xb-border">
-                    <div className="xb-img">
-                      {[...Array(4)].map((_, i) => (
-                        <Link to="/blog-details" key={i}>
-                          <img src={img01} alt="blog" />
-                        </Link>
-                      ))}
-                    </div>
-                    <div className="xb-item--holder">
-                      <ul className="xb-item--meta list-unstyled ul_li">
-                        <li>
-                          <img src={icon01} alt="icon" /> ai business tips
-                        </li>
-                        <li>
-                          <img src={icon02} alt="icon" /> March 24, 2025
-                        </li>
-                      </ul>
-                      <h2 className="xb-item--title">
-                        <Link to="/blog-details">
-                          How AI is transforming modern business operations and driving innovation — everything you
-                          need to know..
-                        </Link>
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {cards.map((card, index) => {
+                const large = index === 0;
+                const delay = WOW_DELAYS[index] ?? "300ms";
+                const colClass = large ? "col-lg-12" : "col-lg-6 col-md-6";
+                const itemClass = large
+                  ? "xb-blog-item"
+                  : "xb-blog-item xb-small-blog-item";
 
-              {/* Small Blog 1 */}
-              <div className="col-lg-6 col-md-6 mt-30">
-                <div className="xb-blog-item xb-small-blog-item wow fadeInUp" data-wow-delay="150ms" data-wow-duration="600ms">
-                  <div className="xb-item--inner img-hove-effect xb-border">
-                    <div className="xb-img">
-                      {[...Array(4)].map((_, i) => (
-                        <Link to="/blog-details" key={i}>
-                          <img src={img02} alt="blog" />
-                        </Link>
-                      ))}
-                    </div>
-                    <div className="xb-item--holder">
-                      <ul className="xb-item--meta list-unstyled ul_li">
-                        <li>
-                          <img src={icon01} alt="icon" /> chatbots tips
-                        </li>
-                        <li>
-                          <img src={icon02} alt="icon" /> April 27, 2025
-                        </li>
-                      </ul>
-                      <h2 className="xb-item--title">
-                        <Link to="/blog-details">AI chatbots vs human support — which is best for you?</Link>
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Small Blog 2 */}
-              <div className="col-lg-6 col-md-6 mt-30">
-                <div className="xb-blog-item xb-small-blog-item wow fadeInUp" data-wow-delay="300ms" data-wow-duration="600ms">
-                  <div className="xb-item--inner img-hove-effect xb-border">
-                    <div className="xb-img">
-                      {[...Array(4)].map((_, i) => (
-                        <Link to="/blog-details" key={i}>
-                          <img src={img03} alt="blog" />
-                        </Link>
-                      ))}
-                    </div>
-                    <div className="xb-item--holder">
-                      <ul className="xb-item--meta list-unstyled ul_li">
-                        <li>
-                          <img src={icon01} alt="icon" /> ai business
-                        </li>
-                        <li>
-                          <img src={icon02} alt="icon" /> March 17, 2025
-                        </li>
-                      </ul>
-                      <h2 className="xb-item--title">
-                        <Link to="/blog-details">How eCommerce brands use AI to increase sales..</Link>
-                      </h2>
+                return (
+                  <div className={`${colClass} mt-30`} key={card.slug}>
+                    <div
+                      className={`${itemClass} wow fadeInUp`}
+                      data-wow-delay={delay}
+                      data-wow-duration="600ms"
+                    >
+                      <div className="xb-item--inner img-hove-effect xb-border">
+                        <div className="xb-img">
+                          {[...Array(4)].map((_, i) => (
+                            <Link to={`/blog/${card.slug}`} key={i}>
+                              <img src={card.image} alt={card.title} />
+                            </Link>
+                          ))}
+                        </div>
+                        <div className="xb-item--holder">
+                          <ul className="xb-item--meta list-unstyled ul_li">
+                            <li>
+                              <img src={icon01} alt="icon" /> {card.metaLabel}
+                            </li>
+                            <li>
+                              <img src={icon02} alt="icon" /> {card.dateLabel}
+                            </li>
+                          </ul>
+                          <h2 className="xb-item--title">
+                            <Link to={`/blog/${card.slug}`}>{card.title}</Link>
+                          </h2>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </div>
         </div>

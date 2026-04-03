@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { 
   getFormSubmissions, 
+  getFormSubmissionsLocal,
   updateSubmissionStatus, 
   deleteSubmission,
-  getSubmissionStats,
+  getSubmissionStatsFromList,
   FormSubmission 
 } from '../../services/formSubmissionService';
 import './AdminSubmissions.css';
@@ -13,32 +14,42 @@ import './AdminSubmissions.css';
 const AdminSubmissions: React.FC = () => {
   const { logout } = useAuth();
   const [submissions, setSubmissions] = useState<FormSubmission[]>([]);
-  const [stats, setStats] = useState(getSubmissionStats());
+  const [stats, setStats] = useState(() => getSubmissionStatsFromList([]));
   const [filterStatus, setFilterStatus] = useState<'all' | FormSubmission['status']>('all');
   const [selectedSubmission, setSelectedSubmission] = useState<FormSubmission | null>(null);
 
   useEffect(() => {
-    loadSubmissions();
+    void loadSubmissions();
   }, []);
 
-  const loadSubmissions = () => {
-    const allSubmissions = getFormSubmissions();
-    setSubmissions(allSubmissions);
-    setStats(getSubmissionStats());
+  const loadSubmissions = async () => {
+    try {
+      const allSubmissions = await getFormSubmissions();
+      setSubmissions(allSubmissions);
+      setStats(getSubmissionStatsFromList(allSubmissions));
+    } catch {
+      const local = getFormSubmissionsLocal();
+      setSubmissions(local);
+      setStats(getSubmissionStatsFromList(local));
+    }
   };
 
-  const handleStatusChange = (id: string, status: FormSubmission['status']) => {
-    updateSubmissionStatus(id, status);
-    loadSubmissions();
+  const handleStatusChange = async (id: string, status: FormSubmission['status']) => {
+    await updateSubmissionStatus(id, status);
+    await loadSubmissions();
+    setSelectedSubmission((prev) =>
+      prev && prev.id === id ? { ...prev, status } : prev
+    );
   };
 
-  const handleDelete = (id: string) => {
-    if (window.confirm('Are you sure you want to delete this submission?')) {
-      deleteSubmission(id);
-      loadSubmissions();
-      if (selectedSubmission?.id === id) {
-        setSelectedSubmission(null);
-      }
+  const handleDelete = async (id: string) => {
+    if (!window.confirm('Are you sure you want to delete this submission?')) {
+      return;
+    }
+    await deleteSubmission(id);
+    await loadSubmissions();
+    if (selectedSubmission?.id === id) {
+      setSelectedSubmission(null);
     }
   };
 
@@ -74,6 +85,9 @@ const AdminSubmissions: React.FC = () => {
           <div className="admin-header-actions">
             <Link to="/admin/dashboard" className="admin-nav-link">
               Dashboard
+            </Link>
+            <Link to="/admin/blogs" className="admin-nav-link">
+              Blog CMS
             </Link>
             <button onClick={logout} className="admin-logout-btn">
               Logout
@@ -159,7 +173,7 @@ const AdminSubmissions: React.FC = () => {
                           <button
                             onClick={(e) => {
                               e.stopPropagation();
-                              handleDelete(submission.id);
+                              void handleDelete(submission.id);
                             }}
                             className="delete-btn"
                             title="Delete"
@@ -225,7 +239,18 @@ const AdminSubmissions: React.FC = () => {
                 {selectedSubmission.fileName && (
                   <div className="detail-section">
                     <label>Attached File:</label>
-                    <p>{selectedSubmission.fileName}</p>
+                    {selectedSubmission.fileDataBase64 ? (
+                      <p>
+                        <a
+                          href={selectedSubmission.fileDataBase64}
+                          download={selectedSubmission.fileName}
+                        >
+                          Download {selectedSubmission.fileName}
+                        </a>
+                      </p>
+                    ) : (
+                      <p>{selectedSubmission.fileName}</p>
+                    )}
                   </div>
                 )}
 

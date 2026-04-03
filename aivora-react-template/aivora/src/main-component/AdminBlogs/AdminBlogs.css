@@ -1,0 +1,246 @@
+.admin-blogs-page .admin-blogs-intro {
+  max-width: 900px;
+  margin: 0 auto 24px;
+  padding: 16px 20px;
+  background: #fff;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.admin-blogs-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 340px) 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+@media (max-width: 991px) {
+  .admin-blogs-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.admin-blogs-list-panel {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.admin-blogs-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.admin-blogs-list-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.admin-blogs-new-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.admin-blogs-new-btn:hover {
+  background: #5a6fd6;
+}
+
+.admin-blogs-card-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-blogs-card-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 8px;
+  border-bottom: 1px solid #eee;
+  border-radius: 6px;
+}
+
+.admin-blogs-card-list li.is-active {
+  background: #f0f4ff;
+}
+
+.admin-blogs-card-select {
+  flex: 1;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.admin-blogs-card-title {
+  display: block;
+  font-weight: 600;
+  color: #222;
+  font-size: 14px;
+}
+
+.admin-blogs-card-slug {
+  display: block;
+  font-size: 12px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.admin-blogs-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-blogs-link {
+  font-size: 13px;
+  color: #667eea;
+}
+
+.admin-blogs-form {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.admin-blogs-form h3 {
+  margin: 0 0 20px;
+  font-size: 20px;
+}
+
+.admin-blogs-label {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+.admin-blogs-label input,
+.admin-blogs-label textarea {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+.admin-blogs-label input[type="file"] {
+  margin-top: 8px;
+  padding: 8px 0;
+  border: none;
+}
+
+.admin-blogs-html {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.admin-blogs-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 767px) {
+  .admin-blogs-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.admin-blogs-hint {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #888;
+}
+
+.admin-blogs-preview-url {
+  font-size: 13px;
+  word-break: break-all;
+  margin-bottom: 16px;
+}
+
+.admin-blogs-preview-url a {
+  color: #667eea;
+}
+
+.admin-blogs-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.admin-blogs-form-actions .admin-login-button {
+  margin: 0;
+}
+
+.admin-blogs-cancel {
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.admin-blogs-flash {
+  padding: 12px 14px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.admin-blogs-flash.ok {
+  background: #e8f5e9;
+  color: #1b5e20;
+}
+
+.admin-blogs-flash.err {
+  background: #ffebee;
+  color: #b71c1c;
+}
+
+/* CMS-rendered article HTML (public blog page) */
+.cms-blog-html {
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--color-gray, #86878d);
+}
+
+.cms-blog-html p {
+  margin-bottom: 1rem;
+}
+
+.cms-blog-html h3 {
+  color: var(--color-white, #fff);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.cms-blog-html ul {
+  margin-bottom: 1rem;
+  padding-left: 1.25rem;
+}

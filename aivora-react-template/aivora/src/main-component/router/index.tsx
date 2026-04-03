@@ -24,6 +24,7 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 import AdminLogin from "../AdminLogin/AdminLogin";
 import AdminDashboard from "../AdminDashboard/AdminDashboard";
 import AdminSubmissions from "../AdminSubmissions/AdminSubmissions";
+import AdminBlogs from "../AdminBlogs/AdminBlogs";
 import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
 
 // ✅ Router Component
@@ -49,7 +50,8 @@ const AllRoute: React.FC = () => {
           <Route path="/project-details" element={<ProjectDetails />} />
           <Route path="/team" element={<TeamPage />} />
           <Route path="/blog" element={<BlogPage />} />
-          <Route path="/blog-details" element={<BlogDetails />} />
+          {/* <Route path="/blog-details" element={<BlogDetails />} /> */}
+          <Route path="/blog/:slug" element={<BlogDetails />} />
           <Route path="/contact" element={<ContactPage />} />
           
           {/* ✅ Admin Routes */}
@@ -67,6 +69,14 @@ const AllRoute: React.FC = () => {
             element={
               <ProtectedRoute>
                 <AdminSubmissions />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/admin/blogs" 
+            element={
+              <ProtectedRoute>
+                <AdminBlogs />
               </ProtectedRoute>
             } 
           />

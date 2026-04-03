@@ -29,6 +29,9 @@ const AdminDashboard: React.FC = () => {
             <Link to="/admin/submissions" className="admin-nav-link">
               View Submissions
             </Link>
+            <Link to="/admin/blogs" className="admin-nav-link">
+              Blog CMS
+            </Link>
             <button onClick={handleLogout} className="admin-logout-btn">
               Logout
             </button>

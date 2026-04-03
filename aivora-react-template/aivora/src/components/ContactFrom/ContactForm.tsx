@@ -11,6 +11,17 @@ import listIcon from "../../images/icon/list-icon.svg";
 import messageIcon from "../../images/icon/messages-icon.svg";
 import arrowIcon from "../../images/icon/rotate-arrow-black02.svg";
 
+const MAX_FILE_BYTES = 1.5 * 1024 * 1024;
+
+function readFileAsDataUrl(file: File): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result || ""));
+    reader.onerror = () => reject(new Error("read failed"));
+    reader.readAsDataURL(file);
+  });
+}
+
 const ContactForm: React.FC = () => {
   const [forms, setForms] = useState({
     name: "",
@@ -20,6 +31,8 @@ const ContactForm: React.FC = () => {
     message: "",
     file: null as File | null,
   });
+
+  const [submitting, setSubmitting] = useState(false);
 
   const [validator] = useState(
     new SimpleReactValidator({ className: "errorMessage" })
@@ -40,40 +53,58 @@ const ContactForm: React.FC = () => {
     setForms({ ...forms, file });
   };
 
-  const submitHandler = (e: React.FormEvent) => {
+  const submitHandler = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (validator.allValid()) {
-      try {
-        // Save form submission
-        saveFormSubmission({
-          name: forms.name,
-          email: forms.email,
-          phone: forms.phone,
-          service: forms.service,
-          message: forms.message,
-          fileName: forms.file ? forms.file.name : undefined,
-        });
-
-        console.log("✅ Form submitted and saved:", forms);
-        alert("Thank you! Your message has been submitted successfully. We'll get back to you soon.");
-
-        // Reset form
-        setForms({
-          name: "",
-          email: "",
-          phone: "",
-          service: "",
-          message: "",
-          file: null,
-        });
-        validator.hideMessages();
-      } catch (error) {
-        console.error("Error saving submission:", error);
-        alert("There was an error submitting your form. Please try again.");
-      }
-    } else {
+    if (!validator.allValid()) {
       validator.showMessages();
+      return;
+    }
+
+    setSubmitting(true);
+    try {
+      let fileBase64: string | undefined;
+      let fileName: string | undefined;
+
+      if (forms.file) {
+        fileName = forms.file.name;
+        if (forms.file.size <= MAX_FILE_BYTES) {
+          try {
+            fileBase64 = await readFileAsDataUrl(forms.file);
+          } catch {
+            fileBase64 = undefined;
+          }
+        }
+      }
+
+      await saveFormSubmission({
+        name: forms.name,
+        email: forms.email,
+        phone: forms.phone,
+        service: forms.service,
+        message: forms.message,
+        fileName,
+        fileBase64,
+      });
+
+      alert(
+        "Thank you! Your message has been submitted successfully. We'll get back to you soon."
+      );
+
+      setForms({
+        name: "",
+        email: "",
+        phone: "",
+        service: "",
+        message: "",
+        file: null,
+      });
+      validator.hideMessages();
+    } catch (error) {
+      console.error("Error saving submission:", error);
+      alert("There was an error submitting your form. Please try again.");
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -90,6 +121,7 @@ const ContactForm: React.FC = () => {
               value={forms.name}
               onChange={changeHandler}
               required
+              disabled={submitting}
             />
             <label htmlFor="author-name">Your Name*</label>
             <img src={userIcon} alt="user" />
@@ -107,6 +139,7 @@ const ContactForm: React.FC = () => {
               value={forms.email}
               onChange={changeHandler}
               required
+              disabled={submitting}
             />
             <label htmlFor="author-email">Email Address*</label>
             <img src={emailIcon} alt="email" />
@@ -124,6 +157,7 @@ const ContactForm: React.FC = () => {
               value={forms.phone}
               onChange={changeHandler}
               required
+              disabled={submitting}
             />
             <label htmlFor="author-phone">Contact No*</label>
             <img src={phoneIcon} alt="phone" />
@@ -134,7 +168,7 @@ const ContactForm: React.FC = () => {
         {/* File Upload */}
         <div className="col-lg-6 col-md-6 mt-20">
           <div className="xb-input-field xb-select-file">
-            <input type="file" onChange={fileHandler} />
+            <input type="file" onChange={fileHandler} disabled={submitting} />
             <img src={uploadIcon} alt="upload" />
             <span>{forms.file ? forms.file.name : "Attach file..."}</span>
           </div>
@@ -149,11 +183,18 @@ const ContactForm: React.FC = () => {
               onChange={changeHandler}
               required
               className="nice-select"
+              disabled={submitting}
             >
               <option value="">Select Service*</option>
-              <option value="AI - marketing">AI - marketing</option>
-              <option value="AI consulting">AI consulting</option>
-              <option value="AI chatbot virtual">AI chatbot virtual</option>
+              <option value="Ecommerce Website Designing">Ecommerce Website Designing</option>
+              <option value="Business Website Development">Business Website Development</option>
+              <option value="Mobile application development">Mobile application development</option>
+              <option value="Search Engine Optimization (SEO)">Search Engine Optimization (SEO)</option>
+              <option value="Performance Marketing">Performance Marketing</option>
+              <option value="Social Media Marketing & Advertising">Social Media Marketing & Advertising</option>
+              <option value="Graphics Designing & Brand Profiling">Graphics Designing & Brand Profiling</option>
+              <option value="Content Creation">Content Creation</option>
+
             </select>
             <img src={listIcon} alt="list" />
           </div>
@@ -169,6 +210,7 @@ const ContactForm: React.FC = () => {
               value={forms.message}
               onChange={changeHandler}
               required
+              disabled={submitting}
             ></textarea>
             <label htmlFor="massage">Your Message..</label>
             <img src={messageIcon} alt="message" />
@@ -179,8 +221,8 @@ const ContactForm: React.FC = () => {
 
       {/* Submit Button */}
       <div className="form-submit-btn mt-35">
-        <button type="submit" className="thm-btn form-btn">
-          Submit Here
+        <button type="submit" className="thm-btn form-btn" disabled={submitting}>
+          {submitting ? "Sending…" : "Submit Here"}
           <span className="xb-icon">
             <img src={arrowIcon} alt="arrow" />
             <img src={arrowIcon} alt="arrow" />

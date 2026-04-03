@@ -21,10 +21,10 @@ const RelatedBlog: React.FC = () => {
           <div className="xb-blog-item xb-small-blog-item">
             <div className="xb-item--inner img-hove-effect xb-border">
               <div className="xb-img">
-                <Link to="/blog-details"><img src={img02} alt="bimage" /></Link>
-                <Link to="/blog-details"><img src={img02} alt="bimage" /></Link>
-                <Link to="/blog-details"><img src={img02} alt="bimage" /></Link>
-                <Link to="/blog-details"><img src={img02} alt="bimage" /></Link>
+                <Link to="/blog/chatbot-vs-human"><img src={img02} alt="bimage" /></Link>
+                <Link to="/blog/chatbot-vs-human"><img src={img02} alt="bimage" /></Link>
+                <Link to="/blog/chatbot-vs-human"><img src={img02} alt="bimage" /></Link>
+                <Link to="/blog/chatbot-vs-human"><img src={img02} alt="bimage" /></Link>
               </div>
 
               <div className="xb-item--holder">
@@ -40,7 +40,7 @@ const RelatedBlog: React.FC = () => {
                 </ul>
 
                 <h2 className="xb-item--title border-effect-2">
-                  <Link to="/blog-details">
+                  <Link to="/blog/chatbot-vs-human">
                     AI chatbots vs human support which is best for?..
                   </Link>
                 </h2>
@@ -54,10 +54,10 @@ const RelatedBlog: React.FC = () => {
           <div className="xb-blog-item xb-small-blog-item">
             <div className="xb-item--inner img-hove-effect xb-border">
               <div className="xb-img">
-                <Link to="/blog-details"><img src={img03} alt="bimage" /></Link>
-                <Link to="/blog-details"><img src={img03} alt="bimage" /></Link>
-                <Link to="/blog-details"><img src={img03} alt="bimage" /></Link>
-                <Link to="/blog-details"><img src={img03} alt="bimage" /></Link>
+                <Link to="/blog/ai-ecommerce"><img src={img03} alt="bimage" /></Link>
+                <Link to="/blog/ai-ecommerce"><img src={img03} alt="bimage" /></Link>
+                <Link to="/blog/ai-ecommerce"><img src={img03} alt="bimage" /></Link>
+                <Link to="/blog/ai-ecommerce"><img src={img03} alt="bimage" /></Link>
               </div>
 
               <div className="xb-item--holder">
@@ -73,7 +73,7 @@ const RelatedBlog: React.FC = () => {
                 </ul>
 
                 <h2 className="xb-item--title border-effect-2">
-                  <Link to="/blog-details">
+                  <Link to="/blog/ai-ecommerce">
                     How E-commerce brands use AI to increase sales..
                   </Link>
                 </h2>
@@ -87,10 +87,10 @@ const RelatedBlog: React.FC = () => {
           <div className="xb-blog-item xb-small-blog-item">
             <div className="xb-item--inner img-hove-effect xb-border">
               <div className="xb-img">
-                <Link to="/blog-details"><img src={img12} alt="bimage" /></Link>
-                <Link to="/blog-details"><img src={img12} alt="bimage" /></Link>
-                <Link to="/blog-details"><img src={img12} alt="bimage" /></Link>
-                <Link to="/blog-details"><img src={img12} alt="bimage" /></Link>
+                <Link to="/blog/seo-guide"><img src={img12} alt="bimage" /></Link>
+                <Link to="/blog/seo-guide"><img src={img12} alt="bimage" /></Link>
+                <Link to="/blog/seo-guide"><img src={img12} alt="bimage" /></Link>
+                <Link to="/blog/seo-guide"><img src={img12} alt="bimage" /></Link>
               </div>
 
               <div className="xb-item--holder">
@@ -106,8 +106,8 @@ const RelatedBlog: React.FC = () => {
                 </ul>
 
                 <h2 className="xb-item--title border-effect-2">
-                  <Link to="/blog-details">
-                    How AI is transforming modern business..
+                  <Link to="/blog/seo-guide">
+                    Why Local SEO and Technical SEO matter for your site..
                   </Link>
                 </h2>
               </div>

@@ -98,17 +98,17 @@ const Footer: React.FC = () => {
         </svg>
       ),
       name: "Twitter",
-      url: "https://twitter.com/",
+      url: "https://x.com/minexx_official",
     },
     {
       icon: <i className="fa-brands fa-linkedin"></i>,
       name: "LinkedIn",
-      url: "https://www.linkedin.com/",
+      url: "https://www.linkedin.com/in/minexx-digital-agency-944839400/?skipRedirect=true",
     },
     {
       icon: <i className="fa-brands fa-square-youtube"></i>,
       name: "YouTube",
-      url: "https://www.youtube.com/",
+      url: "https://www.youtube.com/channel/UCqgkQDR0cdAXnZot4Q-bbCA",
     },
   ];
 
@@ -120,10 +120,9 @@ const Footer: React.FC = () => {
       <div className="xb-footer-wrap">
         {/* Footer Heading */}
         <div className="xb-footer-heading wow zoomIn" data-wow-delay="0ms" data-wow-duration="600ms">
-        <h1 className="title">Minex</h1>
-          <a className="mail" href="mailto:minex@domain.com">
-            <img src={emailIcon} alt="email" /> minex@domain.com
-          </a>
+        <h1 className="title">Minexx</h1>
+          <a className="mail" href="mailto:minexx.official@gmail.com">
+minexx.official@gmail.com </a>
         </div>
 
         {/* Footer Navigation */}
@@ -186,21 +185,21 @@ const Footer: React.FC = () => {
         <div className="xb-footer-bottom">
           <div className="contact-item">
             <img src={locationIcon} alt="location" />
-            <span className="contact-method">4517 Washington, USA</span>
+            <span className="contact-method">Virar, Maharashtra, India</span>
           </div>
 
           <div className="contact-item copyright-item">
             <p>
-              Copyright © 2025 <Link to="/">Minex</Link>, All rights reserved.
+              Copyright © 2026 <Link to="/">Minexx</Link>, All rights reserved.
             </p>
           </div>
 
           <div className="contact-item">
-            <a href="tel:+112304528597">
+            <a href="tel:+919920341110">
               <img src={callIcon} alt="call" />
             </a>
-            <a className="contact-method" href="tel:+112304528597">
-              +(1)1230 452 8597
+            <a className="contact-method" href="tel:+919920341110">
+              +(91) 9920341110
             </a>
           </div>
         </div>

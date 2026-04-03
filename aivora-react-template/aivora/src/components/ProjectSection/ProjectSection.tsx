@@ -9,9 +9,9 @@ import projectImg03 from "../../images/project/web3.png";
 import projectImg04 from "../../images/project/web4.png";
 
 // ✅ Import icons
-import icon01 from "../../images/icon/project-icon01.svg";
-import icon02 from "../../images/icon/project-icon02.svg";
-import icon03 from "../../images/icon/project-icon03.svg";
+import icon01 from "../../images/icon/1.png";
+import icon02 from "../../images/icon/2.png";
+import icon03 from "../../images/icon/3.png";
 import icon08 from "../../images/icon/project-icon08.svg";
 import icon09 from "../../images/icon/project-icon09.svg";
 import icon10 from "../../images/icon/project-icon10.svg";
@@ -182,34 +182,34 @@ const ProjectSection: React.FC = () => {
             {[
               {
                 img: projectImg01,
-                title: "Chatbot and NLP projects..",
-                desc: "We build smart chatbots and NLP tools that understand and respond naturally. From customer support to document analysis, our AI solutions automate communication, save time, and improve user experience.",
-                industry: "Data Processing",
-                country: "Germany, Issum",
+                title: "Luxury Skincare Brand Website",
+                desc: "We designed and developed a high-converting eCommerce website for a premium skincare brand, focused on delivering a seamless shopping experience. The platform highlights product aesthetics, builds trust, and enhances user engagement through a clean and elegant interface.",
+                industry: "Beauty & Skincare",
+                country: "Punjab, India",
                 techs: [icon01, icon02, icon03],
               },
               {
                 img: projectImg02,
-                title: "E-commerce & marketing..",
-                desc: "We create AI solutions that boost sales and customer engagement—like smart product recommendations, dynamic pricing, and behavior-based targeting. Our tools help brands personalize experiences and grow faster.",
-                industry: "Artificial Intelligence",
-                country: "Singapore",
+                title: "Luxury Jewelry eCommerce Website",
+                desc: "We crafted a visually stunning and high-performance eCommerce platform for a premium jewelry brand. The website focuses on elegant product presentation, smooth navigation, and a seamless shopping experience to enhance customer trust and drive conversions.",
+                industry: "Jewelry & Accessories",
+                country: "Mumbai, India",
                 techs: [icon01, icon08, icon09],
               },
               {
                 img: projectImg03,
-                title: "Computer vision projects..",
-                desc: "We develop AI systems that see and understand visual data—detecting objects, recognizing patterns, and automating inspections. Our computer vision solutions help businesses improve accuracy, decision-making.",
-                industry: "Computer Vision",
-                country: "United States",
+                title: "Modern Furniture eCommerce Website",
+                desc: "We designed and developed a sleek and conversion-focused eCommerce platform for a modern furniture brand. The website emphasizes clean layouts, immersive visuals, and a seamless browsing experience to help customers explore and purchase with ease.",
+                industry: "Furniture & Home Decor",
+                country: "Mumbai, India",
                 techs: [icon10, icon11, icon01],
               },
               {
                 img: projectImg04,
-                title: "Data science analytics..",
-                desc: "We turn complex data into clear, actionable insights. From predictive models to real-time dashboards, our AI-powered analytics help businesses make smarter, faster decisions with confidence.",
-                industry: "Data Science",
-                country: "Canada",
+                title: "CNC Machinery Business Website",
+                desc: "We developed a robust and performance-driven website for a CNC machinery company, focused on showcasing precision engineering solutions. The platform highlights machine capabilities, technical specifications, and enables seamless inquiry generation for industrial clients.",
+                industry: "Manufacturing & Engineering",
+                country: "Delhi, India",
                 techs: [icon08, icon12, icon13],
               },
             ].map((project, index) => (

@@ -8,36 +8,41 @@ import iconEye from "../../images/icon/eye-icon.svg";
 import iconLink from "../../images/icon/link-icon.svg";
 import iconBookmark from "../../images/icon/bookmark-icon.svg";
 
-const ItemDetailsContent: React.FC = () => {
+export interface ItemDetailsContentProps {
+  metaTag: string;
+  lastUpdate: string;
+  title: string;
+  intro: string;
+}
+
+const ItemDetailsContent: React.FC<ItemDetailsContentProps> = ({
+  metaTag,
+  lastUpdate,
+  title,
+  intro,
+}) => {
   return (
     <div className="item_details_content pb-80">
       <ul className="post_meta ul_li list-unstyled mb-25">
         <li>
-          <Link to="/blog-details">
-            <span className="meta_label1">#ai tools tips</span>
+          <Link to="/blog">
+            <span className="meta_label1">{metaTag}</span>
           </Link>
         </li>
 
         <li>
-          <Link to="/blog-details">
+          <Link to="/blog">
             <span className="meta_icon">
               <img src={iconCalendar} alt="Calendar" />
             </span>
-            <span className="meta_label">Last Update: 02/12/2025</span>
+            <span className="meta_label">{lastUpdate}</span>
           </Link>
         </li>
       </ul>
 
-      <h2 className="details-content-title mb-15">
-        How our AI agency delivers next-gen <br /> automation tools to help
-        businesses.
-      </h2>
+      <h2 className="details-content-title mb-15">{title}</h2>
 
-      <p className="mb-35">
-        Our AI agency builds next-gen automation tools that help businesses
-        streamline operations, reduce manual work, and improve overall
-        efficiency...
-      </p>
+      <p className="mb-35">{intro}</p>
 
       {/* AUTHOR / META INFO */}
       <div className="post-meta-wrap">
@@ -46,7 +51,7 @@ const ItemDetailsContent: React.FC = () => {
           <div className="col-md-6 mt-15">
             <ul className="post_meta list-unstyled ul_li">
               <li>
-                <Link to="/blog-details">
+                <Link to="/blog">
                   <span className="meta_icon">
                     <img src={iconUserGradient} alt="User" />
                   </span>
@@ -55,7 +60,7 @@ const ItemDetailsContent: React.FC = () => {
               </li>
 
               <li>
-                <Link to="/blog-details">
+                <Link to="/blog">
                   <span className="meta_icon">
                     <img src={iconComment} alt="Comments" />
                   </span>
@@ -64,7 +69,7 @@ const ItemDetailsContent: React.FC = () => {
               </li>
 
               <li>
-                <Link to="/blog-details">
+                <Link to="/blog">
                   <span className="meta_icon">
                     <img src={iconEye} alt="Views" />
                   </span>
@@ -78,7 +83,7 @@ const ItemDetailsContent: React.FC = () => {
           <div className="col-md-6 mt-15">
             <ul className="post_meta list-unstyled ul_li justify-content-md-end">
               <li>
-                <Link to="/blog-details">
+                <Link to="/blog">
                   <span className="meta_icon">
                     <img src={iconLink} alt="Copy Link" />
                   </span>
@@ -87,7 +92,7 @@ const ItemDetailsContent: React.FC = () => {
               </li>
 
               <li>
-                <Link to="/blog-details">
+                <Link to="/blog">
                   <span className="meta_icon">
                     <img src={iconBookmark} alt="Bookmark" />
                   </span>

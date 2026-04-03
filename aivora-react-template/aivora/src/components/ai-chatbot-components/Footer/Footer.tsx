@@ -243,7 +243,7 @@ const Footer: React.FC = () => {
                         {/* === Copyright === */}
                         <div className="xbopyright ul_li_between">
                         <p>
-                                Copyright © 2025 <Link to="/ai-chatbot">Minex</Link>, All rights reserved.
+                                Copyright © 2026 <Link to="/ai-chatbot">Minexx</Link>, All rights reserved.
                             </p>
                             <ul className="ai-footer-links ul_li">
                                 <li><Link to="/contact">Terms & Conditions</Link></li>

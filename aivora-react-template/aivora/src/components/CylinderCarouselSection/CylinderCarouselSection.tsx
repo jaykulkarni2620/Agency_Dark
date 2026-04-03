@@ -203,10 +203,10 @@ const CylinderCarouselSection: React.FC<CylinderCarouselSectionProps> = ({
                   style={{ transform: `rotateY(${i * anglePerCard}deg) translateZ(${-CYLINDER_RADIUS}px)` }}
                 >
                   <img src={imgSrc} alt={`Project ${i + 1}`} />
-                  <div className="item-info-overlay">
+                  {/* <div className="item-info-overlay">
                     <h3 className="item-heading">Project {i + 1}</h3>
                     <p className="item-subtext">Digital Design</p>
-                  </div>
+                  </div> */}
                 </div>
               );
             })}

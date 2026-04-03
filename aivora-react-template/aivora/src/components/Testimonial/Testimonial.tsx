@@ -19,9 +19,9 @@ const testimonials = [
     source: "GoodFirms",
     rating: "5.0",
     content:
-      '“We saw a big boost in engagement and sales with their recommendation engine. It personalizes the shopping experience perfectly.”',
-    name: "Riya Mehta",
-    designation: "Manager - Trendico",
+      '“Before Minexx, our ad spend was burning with nothing to show for it. Within 6 weeks they restructured our entire funnel our cost per lead dropped by 40% and we closed 3 enterprise deals that quarter.”',
+    name: "Sachin Kamble",
+    designation: "Founder - Savicnc",
     avatar: avatar1,
   },
   {
@@ -29,9 +29,9 @@ const testimonials = [
     source: "Clutch",
     rating: "4.9",
     content:
-      '“Their NLP tool saves us hours by extracting key info from large documents instantly. It’s fast, accurate, and a huge time-saver.”',
-    name: "Miguel Torres",
-    designation: "CEO & Funder - DocFlow",
+      "“We rebranded completely with Minexx with new identity, new website, new positioning. Our sales team now has something they're proud to show. The brand actually reflects who we are now.”",
+    name: "Shreya Mehta",
+    designation: "CEO & Funder - Zimpo",
     avatar: avatar2,
   },
   {
@@ -39,8 +39,8 @@ const testimonials = [
     source: "Clutch",
     rating: "5.0",
     content:
-      '“Their automation solutions saved us countless hours. Tasks that took days are now completed in minutes. The ROI was almost immediate.”',
-    name: "Sebastian Clark",
+      "“They delivered a full e-commerce site in 3 weeks, which I didn't think was possible. Clean, fast, and our conversion rate went up 28% in the first month. No fluff, just execution.”",
+    name: "Priya Anand",
     designation: "Manager - SwiftLogix",
     avatar: avatar3,
   },
@@ -49,8 +49,8 @@ const testimonials = [
     source: "GoodFirms",
     rating: "5.0",
     content:
-      '“The AI chatbot they developed has transformed our customer service. We now handle 70% of queries with higher customer satisfaction!”',
-    name: "Priya Ramirez",
+      "“Our Instagram went from 2k to 41k followers in 5 months. The content strategy they built was specific to our audience  not generic templates. Engagement is consistently 3x industry average.”",
+    name: "Arjun Joshi",
     designation: "CEO - BrightNest",
     avatar: avatar4,
   },
@@ -59,8 +59,8 @@ const testimonials = [
     source: "Clutch",
     rating: "4.7",
     content:
-      '“We gained deep insights into customer behavior and performance. Their analytics made our decision-making sharper and more confident.”',
-    name: "Sebastian Clark",
+      "“We were ranking on page 4 for our core keywords. Six months with Minexx's SEO team and we're on page 1 for 11 keywords. Organic traffic is up 180%. The ROI speaks for itself.”",
+    name: "Divya Sharma",
     designation: "Director - Finexa Capital",
     avatar: avatar5,
   },
@@ -69,8 +69,8 @@ const testimonials = [
     source: "Clutch",
     rating: "5.0",
     content:
-      '“Their automation solutions saved us countless hours. Tasks that took days are now completed in minutes. The ROI was almost immediate.”',
-    name: "Sebastian Clark",
+      "“'ve worked with 4 agencies before Minexx. The difference is that these guys actually understand business — not just marketing. They pushed back on my ideas when needed, and they were right every time.”",
+    name: "Nikhil Kulkarni",
     designation: "Manager - SwiftLogix",
     avatar: avatar3,
   },
@@ -86,7 +86,7 @@ const TestimonialSection: React.FC = () => {
     <section className="testimonial pb-150 bg_img">
       <div className="container">
         <div className="sec-title sec-title-center tes-sec-title text-center mb-50">
-          <span className="sub-title mb-15">Our Testimonial</span>
+          <span className="sub-title mb-15">OUR TESTIMONIALS</span>
           <h2 className="title">
             Hear from our
             <img src={gifShape} alt="shape" /> happy customers
