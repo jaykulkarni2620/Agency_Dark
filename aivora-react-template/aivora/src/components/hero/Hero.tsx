@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 import heroBg from "../../images/bg/hero_bg.png";
 import heroIcon from "../../images/icon/animated-gif02.gif";
 import heroIcon2 from "../../images/icon/Girl_lap.png";
-import featureIcon1 from "../../images/icon/feature-icon01.svg";
-import featureIcon2 from "../../images/icon/feature-icon02.svg";
-import featureIcon3 from "../../images/icon/feature-icon03.svg";
+import featureIcon1 from "../../images/icon/2.svg";
+import featureIcon2 from "../../images/icon/1.svg";
+import featureIcon3 from "../../images/icon/3.svg";
 
 const HeroSection: React.FC = () => {
   return (
@@ -21,11 +21,11 @@ const HeroSection: React.FC = () => {
           <div className="col-lg-9 col-md-9">
             <div className="hero-content pt-4">
               <h2 className="title scale-animation wow">
-              We Build Brands That Mean Business
+              Grow Your Business Online with <br /> Virar’s Leading Digital Marketing <br /> Agency
               </h2>
               
               <p className="sub-title scale-animation wow">
-                Minexx is a results-driven digital agency helping businesses grow online through sharp strategy, bold creative, and marketing that actually works.
+              We’re not everywhere we’re right here in Virar. Minexx helps local businesses grow with SEO, high-converting websites, and powerful social media marketing.
               </p>
               <div className="hero-btn scale-animation wow">
                 <Link className="thm-btn agency-btn" to="/contact">
@@ -192,10 +192,9 @@ const HeroSection: React.FC = () => {
                   <img src={featureIcon1} alt="icon" />
                 </span>
                 <div className="xb-item--holder">
-                  <h2 className="xb-item--title">We Say No To Projects We Can't Deliver</h2>
+                  <h2 className="xb-item--title">We Only Take Projects We Can Deliver</h2>
                   <p className="xb-item--content">
-                  Honest from day one. If it's not the right fit, we'll tell you — because your time and money matter.
-                  </p>
+                  If it’s not the right fit, we’ll tell you upfront  because your time and money matter. We believe in honest work, not false promises.                  </p>
                 </div>
               </div>
             </div>
@@ -212,10 +211,9 @@ const HeroSection: React.FC = () => {
                   <img src={featureIcon2} alt="icon" />
                 </span>
                 <div className="xb-item--holder">
-                  <h2 className="xb-item--title">Our Work Has To Make You Money</h2>
+                  <h2 className="xb-item--title">Our Work Is Built to Make You Money</h2>
                   <p className="xb-item--content">
-                  Pretty websites that don't bring business are useless. Everything we build has a purpose behind it.
-                  </p>
+                  Good looking websites are useless without results. Everything we create is designed to generate leads and growth.                  </p>
                 </div>
               </div>
             </div>
@@ -232,9 +230,9 @@ const HeroSection: React.FC = () => {
                   <img src={featureIcon3} alt="icon" />
                 </span>
                 <div className="xb-item--holder">
-                  <h2 className="xb-item--title">You'll Always Know Where Things Stand</h2>
+                  <h2 className="xb-item--title">You’ll Always Know What’s Happening</h2>
                   <p className="xb-item--content">
-                  Weekly updates, open communication, no radio silence. You're never left wondering what's happening.
+                  No confusion, no silence just clear communication and regular updates at every stage.
                   </p>
                 </div>
               </div>

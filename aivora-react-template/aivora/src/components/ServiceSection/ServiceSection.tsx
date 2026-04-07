@@ -17,51 +17,58 @@ interface ServiceItem {
   title: string;
   desc: string;
   img: string;
+  alt: string;
   link: string;
 }
 
 const services: ServiceItem[] = [
   {
     id: 1,
-    title: "Web Design & Development",
-    desc: "Websites that look sharp, load fast, and turn visitors into customers.",
+    title: "Web Design Experts in Virar",
+    desc: "We design fast, modern, and SEO-friendly websites that not only look great but convert visitors into customers.",
     img: img01,
-    link: "/service-details",
+    alt: "Web design and development services in Virar",
+    link: "/web-design-development-virar",
   },
   {
     id: 2,
-    title: "Social Media Marketing",
-    desc: "We build your presence on the platforms where your customers actually spend their time.",
+    title: "Social Media Services in Virar",
+    desc: "Grow your brand with engaging content and strategic campaigns that connect with your audience and build trust.",
     img: img02,
-    link: "/service-details",
+    alt: "Social media marketing services in Virar",
+    link: "/social-media-marketing-virar",
   },
   {
     id: 3,
-    title: "Search Engine Optimization",
-    desc: "Get found on Google by the right people at the right time — without paying for every click.",
+    title: "SEO Services in Virar",
+    desc: "Improve your Google rankings and attract the right audience with smart SEO strategies.",
     img: img03,
-    link: "/service-details",
+    alt: "Search engine optimization services in Virar",
+    link: "seo-services-virar",
   },
   {
     id: 4,
-    title: "Paid Advertising",
-    desc: "Run ads on Meta, Google & more that bring in real leads, not just impressions.",
+    title: "Paid Ads Services in Virar",
+    desc: "Run high-performing ads that generate quality leads and maximize your return on investment.",
     img: img04,
-    link: "/service-details",
+    alt: "Google ads and paid advertising services in Virar",
+    link: "/paid-ads-virar"
   },
   {
     id: 5,
-    title: " Brand Identity & Design",
-    desc: "Logo, colours, fonts, tone — we build brands that people remember and trust.",
+    title: " Branding & Design in Virar",
+    desc: "Create a strong and memorable brand that connects with your audience and builds trust.",
     img: img05,
-    link: "/service-details",
+    alt: "Brand identity and design services in Virar",
+    link: "/branding-design-virar",
   },
   {
     id: 6,
-    title: "Content Creation",
-    desc: "Reels, graphics, blogs, copy — content that connects with your audience and keeps them coming back.",
+    title: "Content Creation in Virar",
+    desc: "Reels, graphics, blogs, copy content that connects with your audience and keeps them coming back.",
     img: img06,
-    link: "/service-details",
+    alt: "Content creation services in Virar",
+    link: "/content-creation-virar",
   },
 ];
 
@@ -79,14 +86,14 @@ const ServiceSection: React.FC = () => {
         <div className="row justify-content-center">
           <div className="col-lg-11">
             <div className="sec-title custom-sec-title xb-sec-padding text-center">
-              <span className="sub-title">What We Do</span>
+              <span className="sub-title">WHAT WE DO </span>
               <h2 className="title">
                
                 Services That Actually Move Your Business Forward
               </h2>
               <div className="xb-heading-btn d-inline">
                 <Link className="thm-btn agency-btn" to="/service">
-                  <span className="text">view more services</span>
+                  <span className="text">View All Services →</span>
                   <span className="arrow">
                     <span className="arrow-icon">
                       <svg

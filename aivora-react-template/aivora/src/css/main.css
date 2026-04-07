@@ -6923,6 +6923,7 @@ Drop Down menu end
       transition: 0.3s; }
   .xb-feature-item .xb-item--title {
     font-size: 22px;
+    line-height: 30px;
     margin: 40px 0 5px;
     letter-spacing: -0.04em; }
     @media (max-width: 1199px) {
@@ -10764,8 +10765,9 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
   perspective: 2000px;
   transform-style: preserve-3d; }
   .hero-content .title {
-    font-size: 72px;
-    line-height: 90px;
+    font-size: 40px;
+    margin-bottom: 10px;
+    line-height: 60px;
     letter-spacing: -0.07em;
     color: var(--color-white);
     font-family: var(--font-heading); }

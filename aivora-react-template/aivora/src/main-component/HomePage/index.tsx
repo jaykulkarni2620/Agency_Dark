@@ -1,9 +1,10 @@
 import React, { Fragment, useEffect } from "react";
 import Header from "../../components/Header/Header";
 import HeroSection from "../../components/hero/Hero";
-import AboutSection from "../../components/about/about";
+// import AboutSection from "../../components/about/about";
 import ServiceSection from "../../components/ServiceSection/ServiceSection";
 import FeatureSection from "../../components/FeatureSection/FeatureSection";
+import FeatureSectionabout from "../../components/AboutComponents/FeatureSection/FeatureSection";
 import ProjectSection from "../../components/ProjectSection/ProjectSection";
 import IndustriesMarqueeSection from "../../components/IndustriesMarqueeSection/IndustriesMarqueeSection";
 import IndustriesSection from "../../components/Industries/Industries";
@@ -27,8 +28,10 @@ const HomePage: React.FC = () => {
             <main>
               <HeroSection/>
            
-              <AboutSection/>
+              {/* <AboutSection/> */}
+              <FeatureSectionabout/>
               <ServiceSection/>
+              
               <FeatureSection/>
               <ProjectSection/>
               <IndustriesMarqueeSection/>
