@@ -21,7 +21,7 @@ const HeroSection: React.FC = () => {
           <div className="col-lg-9 col-md-9">
             <div className="hero-content pt-4">
               <h2 className="title scale-animation wow">
-              Grow Your Business Online with <br /> Virar’s Leading Digital Marketing <br /> Agency
+              We Build Brands That Mean Business
               </h2>
               
               <p className="sub-title scale-animation wow">

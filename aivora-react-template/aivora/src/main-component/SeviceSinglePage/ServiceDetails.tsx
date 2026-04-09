@@ -1,12 +1,106 @@
 import React, { useRef, useState } from "react"
+import { useParams } from "react-router-dom";
 import img13 from "../../images/service/img13.jpg";
 import ServiceFaq from "./ServiceFaq";
 import GallerySection from "./GallerySection";
+
+
+const serviceData: any = {
+    "web-design-development-virar": {
+      title: "Web Design & Development in Virar",
+      desc1: "We create modern, fast-loading websites designed to convert visitors into customers. From business websites to landing pages, everything is built with performance in mind.",
+      desc2: "Our websites are SEO-friendly, mobile responsive, and optimized for user experience so your business stands out online.",
+      outcomes: [
+        "Custom Website Design",
+        "Mobile Responsive Layout",
+        "Fast Loading Speed",
+        "SEO Optimized Structure",
+        "Conversion Focused Design",
+        "Secure & Scalable Development",
+      ],
+    },
+  
+    "seo-services-virar": {
+      title: "SEO Services in Virar",
+      desc1: "Rank higher on Google and attract the right audience with our result-driven SEO strategies tailored for your business.",
+      desc2: "We focus on long-term growth through technical SEO, content optimization, and local SEO strategies.",
+      outcomes: [
+        "Keyword Research & Strategy",
+        "On-Page SEO Optimization",
+        "Technical SEO Fixes",
+        "Local SEO (Google Ranking)",
+        "Content Optimization",
+        "Monthly Performance Reports",
+      ],
+    },
+  
+    "social-media-marketing-virar": {
+      title: "Social Media Marketing in Virar",
+      desc1: "Build your brand presence on platforms where your audience spends time.",
+      desc2: "We create engaging content and run campaigns that increase visibility and trust.",
+      outcomes: [
+        "Content Strategy",
+        "Instagram & Facebook Growth",
+        "Ad Campaign Management",
+        "Audience Engagement",
+        "Brand Awareness",
+        "Performance Tracking",
+      ],
+    },
+  
+    "paid-ads-virar": {
+      title: "Paid Advertising in Virar",
+      desc1: "Generate leads and sales through high-performing ad campaigns.",
+      desc2: "We run targeted ads on Google and Meta platforms to maximize ROI.",
+      outcomes: [
+        "Google Ads Campaigns",
+        "Meta Ads (Facebook/Instagram)",
+        "Audience Targeting",
+        "Conversion Optimization",
+        "A/B Testing",
+        "ROI Tracking",
+      ],
+    },
+  
+    "branding-design-virar": {
+      title: "Brand Identity & Design in Virar",
+      desc1: "Create a strong and memorable brand identity that stands out.",
+      desc2: "From logos to full brand systems, we design everything with strategy.",
+      outcomes: [
+        "Logo Design",
+        "Brand Guidelines",
+        "Color & Typography",
+        "Visual Identity",
+        "Marketing Collateral",
+        "Brand Positioning",
+      ],
+    },
+  
+    "content-creation-virar": {
+      title: "Content Creation in Virar",
+      desc1: "Content that connects, engages, and converts your audience.",
+      desc2: "We create reels, graphics, and copy that builds your brand.",
+      outcomes: [
+        "Reels & Video Content",
+        "Social Media Creatives",
+        "Copywriting",
+        "Blog Writing",
+        "Content Strategy",
+        "Audience Engagement",
+      ],
+      
+    },
+    
+  };
 
 const VIDEO_URL = "https://www.youtube.com/embed/F8NKVhkZZWI?autoplay=1";
 
 const ServiceDetails: React.FC = () => {
 
+    const { service } = useParams();
+    const currentService = serviceData[service || ""];
+
+    if (!currentService) return <h2>Service not found</h2>;
 
     const [isOpen, setIsOpen] = useState(false);
     const iframeRef = useRef<HTMLIFrameElement | null>(null);
@@ -63,16 +157,11 @@ const ServiceDetails: React.FC = () => {
                 </div>
                 {/* ========= TITLE & TEXT ========= */}
                 <h2 className="details-content-title mb-15">
-                    Data and intelligence solutions for smarter.
+                    {currentService.title}
                 </h2>
 
-                <p>
-                    Unlock the true value of your data with our comprehensive AI-driven data and intelligence solutions. We help businesses collect, organize, and analyze vast amounts of information to extract meaningful insights and make smarter, faster decisions. By leveraging advanced analytics, machine learning, and real-time data processing, we transform raw data into powerful tools for innovation, strategy, and growth. Whether you're looking to optimize operations, improve customer experiences, or forecast trends, our solutions provide the intelligence you need to stay ahead in a competitive, data-driven world.
-                </p>
-
-                <p className="mt-30">
-                    We turn complex information into clear, actionable insights. These insights empower smarter decisions, streamline operations, enhance customer experiences, and drive measurable business growth. Whether you're navigating market trends, optimizing workflows, or building data-driven strategies, we provide the tools and expertise to help you lead with confidence in a data-first world.
-                </p>
+                <p>{currentService.desc1}</p>
+                <p className="mt-30">{currentService.desc2}</p>
 
                 {/* ========= SERVICE PROCESS ========= */}
                 <ServiceFaq />

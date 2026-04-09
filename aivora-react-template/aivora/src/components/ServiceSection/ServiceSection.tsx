@@ -24,51 +24,51 @@ interface ServiceItem {
 const services: ServiceItem[] = [
   {
     id: 1,
-    title: "Web Design Experts in Virar",
+    title: "Web Design & Development",
     desc: "We design fast, modern, and SEO-friendly websites that not only look great but convert visitors into customers.",
     img: img01,
     alt: "Web design and development services in Virar",
-    link: "/web-design-development-virar",
+    link: "/service/web-design-development-virar",
   },
   {
     id: 2,
-    title: "Social Media Services in Virar",
+    title: "Social Media Marketing",
     desc: "Grow your brand with engaging content and strategic campaigns that connect with your audience and build trust.",
     img: img02,
     alt: "Social media marketing services in Virar",
-    link: "/social-media-marketing-virar",
+    link: "/service/social-media-marketing-virar",
   },
   {
     id: 3,
-    title: "SEO Services in Virar",
+    title: "Search Engine Optimization",
     desc: "Improve your Google rankings and attract the right audience with smart SEO strategies.",
     img: img03,
     alt: "Search engine optimization services in Virar",
-    link: "seo-services-virar",
+    link: "/service/seo-services-virar",
   },
   {
     id: 4,
-    title: "Paid Ads Services in Virar",
+    title: "Paid Advertising",
     desc: "Run high-performing ads that generate quality leads and maximize your return on investment.",
     img: img04,
     alt: "Google ads and paid advertising services in Virar",
-    link: "/paid-ads-virar"
+    link: "/service/paid-ads-virar"
   },
   {
     id: 5,
-    title: " Branding & Design in Virar",
+    title: "Brand Identity & Design",
     desc: "Create a strong and memorable brand that connects with your audience and builds trust.",
     img: img05,
     alt: "Brand identity and design services in Virar",
-    link: "/branding-design-virar",
+    link: "/service/branding-design-virar",
   },
   {
     id: 6,
-    title: "Content Creation in Virar",
+    title: "Content Creation",
     desc: "Reels, graphics, blogs, copy content that connects with your audience and keeps them coming back.",
     img: img06,
     alt: "Content creation services in Virar",
-    link: "/content-creation-virar",
+    link: "/service/content-creation-virar",
   },
 ];
 
