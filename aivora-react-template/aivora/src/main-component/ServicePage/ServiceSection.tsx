@@ -100,7 +100,7 @@ const ServiceSection: React.FC = () => {
         "We turn complex data into clear, actionable insights using AI and advanced analytics—empowering smarter decisions.",
       images: [img08, img08, img08, img08],
       alt: "Web design and development services in Virar",
-      link: "/service-details",
+      link: "/service/social-media-marketing-virar",
     },
     {
       title: "Search Engine Optimization",
@@ -108,7 +108,7 @@ const ServiceSection: React.FC = () => {
         "We enhance e-commerce with AI-powered, dynamic pricing, and personalized customer experiences.",
       images: [img09, img09, img09, img09],
       alt: "Web design and development services in Virar",
-      link: "/service-details",
+      link: "/service/seo-services-virar",
     },
     {
       title: "Paid Advertising",
@@ -116,7 +116,7 @@ const ServiceSection: React.FC = () => {
         "We guide businesses in adopting AI strategies, optimizing processes, and integrating technologies for lasting success.",
       images: [img11, img11, img11, img11],
       alt: "Web design and development services in Virar",
-      link: "/service-details",
+      link: "/service/paid-ads-virar",
     },
     {
       title: "Brand Identity & Design",
@@ -124,7 +124,7 @@ const ServiceSection: React.FC = () => {
         "We create intelligent chatbots and virtual assistants that improve customer support and automate interactions 24/7.",
       images: [img11, img11, img11, img11],
       alt: "Web design and development services in Virar",
-      link: "/service-details",
+      link: "/service/branding-design-virar",
     },
     {
       title: "Content Creation",
@@ -132,7 +132,7 @@ const ServiceSection: React.FC = () => {
         "Use AI to target audiences, personalize campaigns, and analyze data for better engagement and results.",
       images: [img07, img07, img07, img07],
       alt: "Web design and development services in Virar",
-      link: "/service-details",
+      link: "/service/content-creation-virar",
     },
   ];
 
