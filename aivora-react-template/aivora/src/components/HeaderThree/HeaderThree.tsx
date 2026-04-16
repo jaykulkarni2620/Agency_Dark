@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import logo from "../../images/logo/logo.svg";
+import logo from "../../images/logo/Minexx.svg";
 
 gsap.registerPlugin(ScrollToPlugin);
 

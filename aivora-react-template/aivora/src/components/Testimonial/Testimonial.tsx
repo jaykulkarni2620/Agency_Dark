@@ -127,7 +127,7 @@ const TestimonialSection: React.FC = () => {
                   <p className="xb-item--content">{item.content}</p>
                   <div className="xb-item--author ul_li">
                     <div className="xb-item--avatar">
-                      <img src={item.avatar} alt={item.name} />
+                      {/* <img src={item.avatar} alt={item.name} /> */}
                     </div>
                     <div className="xb-item--holder">
                       <h3 className="xb-item--name">{item.name}</h3>

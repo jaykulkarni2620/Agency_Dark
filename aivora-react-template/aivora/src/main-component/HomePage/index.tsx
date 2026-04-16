@@ -17,7 +17,7 @@ import Scrollbar from "../../components/scrollbar/scrollbar";
 
 const HomePage: React.FC = () => {
   useEffect(() => {
-    document.title = "Home | AI Agency & Technology React Template";
+    document.title = "Minexx Digital Agency | Growth Focused Marketing & Web Solutions";
   }, []);
 
   return (

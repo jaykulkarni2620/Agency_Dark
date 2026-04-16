@@ -10244,7 +10244,10 @@ Drop Down menu end
   .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 1320px;
     padding-left: 15px;
-    padding-right: 15px; } }
+    padding-right: 15px;
+  padding-top: 15px; 
+  padding-bottom: 15px;
+} }
 .g-15 {
   padding: 0 5px; }
   .g-15 > * {

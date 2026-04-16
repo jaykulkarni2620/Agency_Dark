@@ -3,93 +3,13 @@ import { useParams } from "react-router-dom";
 import img13 from "../../images/service/img13.jpg";
 import ServiceFaq from "./ServiceFaq";
 import GallerySection from "./GallerySection";
+import WebDesign from "../../components/WebDesign/WebDesign";
+// import SEOService from "../../components/s";
 
 
 const serviceData: any = {
-    "web-design-development-virar": {
-      title: "Web Design & Development in Virar",
-      desc1: "We create modern, fast-loading websites designed to convert visitors into customers. From business websites to landing pages, everything is built with performance in mind.",
-      desc2: "Our websites are SEO-friendly, mobile responsive, and optimized for user experience so your business stands out online.",
-      outcomes: [
-        "Custom Website Design",
-        "Mobile Responsive Layout",
-        "Fast Loading Speed",
-        "SEO Optimized Structure",
-        "Conversion Focused Design",
-        "Secure & Scalable Development",
-      ],
-    },
-  
-    "seo-services-virar": {
-      title: "SEO Services in Virar",
-      desc1: "Rank higher on Google and attract the right audience with our result-driven SEO strategies tailored for your business.",
-      desc2: "We focus on long-term growth through technical SEO, content optimization, and local SEO strategies.",
-      outcomes: [
-        "Keyword Research & Strategy",
-        "On-Page SEO Optimization",
-        "Technical SEO Fixes",
-        "Local SEO (Google Ranking)",
-        "Content Optimization",
-        "Monthly Performance Reports",
-      ],
-    },
-  
-    "social-media-marketing-virar": {
-      title: "Social Media Marketing in Virar",
-      desc1: "Build your brand presence on platforms where your audience spends time.",
-      desc2: "We create engaging content and run campaigns that increase visibility and trust.",
-      outcomes: [
-        "Content Strategy",
-        "Instagram & Facebook Growth",
-        "Ad Campaign Management",
-        "Audience Engagement",
-        "Brand Awareness",
-        "Performance Tracking",
-      ],
-    },
-  
-    "paid-ads-virar": {
-      title: "Paid Advertising in Virar",
-      desc1: "Generate leads and sales through high-performing ad campaigns.",
-      desc2: "We run targeted ads on Google and Meta platforms to maximize ROI.",
-      outcomes: [
-        "Google Ads Campaigns",
-        "Meta Ads (Facebook/Instagram)",
-        "Audience Targeting",
-        "Conversion Optimization",
-        "A/B Testing",
-        "ROI Tracking",
-      ],
-    },
-  
-    "branding-design-virar": {
-      title: "Brand Identity & Design in Virar",
-      desc1: "Create a strong and memorable brand identity that stands out.",
-      desc2: "From logos to full brand systems, we design everything with strategy.",
-      outcomes: [
-        "Logo Design",
-        "Brand Guidelines",
-        "Color & Typography",
-        "Visual Identity",
-        "Marketing Collateral",
-        "Brand Positioning",
-      ],
-    },
-  
-    "content-creation-virar": {
-      title: "Content Creation in Virar",
-      desc1: "Content that connects, engages, and converts your audience.",
-      desc2: "We create reels, graphics, and copy that builds your brand.",
-      outcomes: [
-        "Reels & Video Content",
-        "Social Media Creatives",
-        "Copywriting",
-        "Blog Writing",
-        "Content Strategy",
-        "Audience Engagement",
-      ],
-      
-    },
+    "web-design-development-virar": <WebDesign />,
+
     
   };
 
@@ -175,7 +95,7 @@ const ServiceDetails: React.FC = () => {
                     </p>
 
                     <ul className="service-outcome-list list-unstyled mt-35">
-                        {outcomeItems.map((item, i) => (
+                    {currentService?.outcomes?.map((item: string, i: number) => (
                             <li key={i}>
                                 <span>
                                     {/* green check icon */}

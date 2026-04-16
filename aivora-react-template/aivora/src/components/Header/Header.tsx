@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../images/logo/logo_.svg";
-import MegaMenu1 from "./MegaMenu1";
-import MegaMenuServices from "./MegaMenu2";
+import logo from "../../images/logo/Minexx.svg";
 import MobileMenu from "../MobileMenu/MobileMenu";
 
 const Header: React.FC = () => {
@@ -109,12 +107,45 @@ const Header: React.FC = () => {
                     <MegaMenu1 />
                   </li> */}
 
-
-                  <li className="menu-item-has-children megamenu">
-                    <Link to="/service" >
+                  
+                  <li className="menu-item-has-children">
+                    <Link to="/service" onClick={handleClick}>
                       <span>Services</span>
                     </Link>
-                    {/* <MegaMenuServices /> */}
+                    <ul className="submenu">
+                      <li>
+                        <Link to="/service/web-design-development-virar" onClick={handleClick}>
+                          <span>Web Design & Development</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="service/social-media-marketing-virar" onClick={handleClick}>
+                          <span>Social Media Marketing</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="service/seo-services-virar" onClick={handleClick}>
+                          <span>Search Engine Optimization</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="service/paid-ads-virar" onClick={handleClick}>
+                          <span>Paid Advertising</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="service/branding-design-virar" onClick={handleClick}>
+                          <span>Brand Identity & Design</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="service/content-creation-virar" onClick={handleClick}>
+                          <span> Content Creation</span>
+                        </Link>
+                      </li>
+                    </ul>
+
+                   
                   </li>
 
                   <li className="menu-item-has-children">

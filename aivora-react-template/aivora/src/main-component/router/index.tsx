@@ -31,7 +31,8 @@ import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
 const AllRoute: React.FC = () => {
   return (
     <div className="App">
-      <BrowserRouter>
+      {/* 🔥 IMPORTANT: basename fix */}
+      <BrowserRouter basename="/">
         <WowInit />
         <ScrollToTop />
 
@@ -50,41 +51,44 @@ const AllRoute: React.FC = () => {
           <Route path="/project-details" element={<ProjectDetails />} />
           <Route path="/team" element={<TeamPage />} />
           <Route path="/blog" element={<BlogPage />} />
-          {/* <Route path="/blog-details" element={<BlogDetails />} /> */}
           <Route path="/blog/:slug" element={<BlogDetails />} />
           <Route path="/contact" element={<ContactPage />} />
-          
+
           {/* ✅ Admin Routes */}
           <Route path="/admin/login" element={<AdminLogin />} />
-          <Route 
-            path="/admin/dashboard" 
+
+          <Route
+            path="/admin/dashboard"
             element={
               <ProtectedRoute>
                 <AdminDashboard />
               </ProtectedRoute>
-            } 
+            }
           />
-          <Route 
-            path="/admin/submissions" 
+
+          <Route
+            path="/admin/submissions"
             element={
               <ProtectedRoute>
                 <AdminSubmissions />
               </ProtectedRoute>
-            } 
+            }
           />
-          <Route 
-            path="/admin/blogs" 
+
+          <Route
+            path="/admin/blogs"
             element={
               <ProtectedRoute>
                 <AdminBlogs />
               </ProtectedRoute>
-            } 
+            }
           />
+
           <Route path="/admin" element={<Navigate to="/admin/login" replace />} />
-          
+
           {/* ✅ Error Page */}
           <Route path="/404" element={<ErrorPage />} />
-          <Route path="*" element={<ErrorPage />} />
+          <Route path="*" element={<Navigate to="/404" replace />} />
         </Routes>
       </BrowserRouter>
     </div>

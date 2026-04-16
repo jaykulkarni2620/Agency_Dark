@@ -5,9 +5,9 @@ import blog09 from "../../images/blog/img09.jpg";
 import blog10 from "../../images/blog/img10.jpg";
 import blog11 from "../../images/blog/img11.jpg";
 
-import img01 from "../../images/blog/img01.jpg";
-import img02 from "../../images/blog/img02.jpg";
-import img03 from "../../images/blog/img03.jpg";
+import img01 from "../../images/blog/seo.png";
+import img02 from "../../images/blog/Abc.png";
+import img03 from "../../images/blog/ecommerce.png";
 
 export const BLOG_SLUGS = [
   "seo-guide",
@@ -127,7 +127,7 @@ function ChatbotVsHumanBody() {
       </div>
 
       <h3 className="item_details_info_heading mb-35">
-        AI chatbots and human agents solve different <br /> parts of the customer journey.
+       Hello solve different <br /> parts of the customer journey.
       </h3>
 
       <div className="row mb-35 mt-none-30">
@@ -292,7 +292,7 @@ export const blogPosts: Record<BlogSlug, BlogPost> = {
     itemDetails: {
       metaTag: "#seo",
       lastUpdate: "Last Update: 03/24/2025",
-      title: "Why Local SEO and Technical SEO Are Non-Negotiable for Your Website",
+      title: "Local & Technical SEO Guide for Businesses",
       intro:
         "Search visibility is a system: local signals bring nearby demand, and technical SEO ensures search engines can crawl, understand, and rank what you publish. Here is how to think about both without chasing shortcuts.",
     },
@@ -308,7 +308,7 @@ export const blogPosts: Record<BlogSlug, BlogPost> = {
     itemDetails: {
       metaTag: "#chatbots",
       lastUpdate: "Last Update: 04/27/2025",
-      title: "AI Chatbots vs Human Support — Which Fits Your Business?",
+      title: "How Social Media Marketing Helps Grow Your Business",
       intro:
         "Automation and people are not opposites. The right mix depends on your volume, risk, and what customers expect when something goes wrong. Use this framework to decide where chatbots help—and where humans should lead.",
     },
@@ -324,7 +324,7 @@ export const blogPosts: Record<BlogSlug, BlogPost> = {
     itemDetails: {
       metaTag: "#ecommerce ai",
       lastUpdate: "Last Update: 03/17/2025",
-      title: "How eCommerce Brands Use AI to Increase Sales and Loyalty",
+      title: "Essential Features Every E-commerce Website Must Have",
       intro:
         "AI can personalize the path from discovery to checkout—if you connect models to real product data and clear KPIs. Below are practical ways brands apply AI without losing trust or control.",
     },

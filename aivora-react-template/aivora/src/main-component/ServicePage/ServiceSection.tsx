@@ -86,45 +86,52 @@ const ServiceSection: React.FC = () => {
   // ========================
   const services = [
     {
-      title: "AI saas product",
+      title: "Web Design & Development",
       content:
         "We build scalable AI-powered SaaS solutions that automate tasks, deliver insights, and boost business performance.",
       images: [img07, img07, img07, img07],
-      link: "/service-details",
+      alt: "Web design and development services in Virar",
+      link: "/service/web-design-development-virar",
+
     },
     {
-      title: "Data and intelligence..",
+      title: "Social Media Marketing",
       content:
         "We turn complex data into clear, actionable insights using AI and advanced analytics—empowering smarter decisions.",
       images: [img08, img08, img08, img08],
+      alt: "Web design and development services in Virar",
       link: "/service-details",
     },
     {
-      title: "AI for E-commerce",
+      title: "Search Engine Optimization",
       content:
         "We enhance e-commerce with AI-powered, dynamic pricing, and personalized customer experiences.",
       images: [img09, img09, img09, img09],
+      alt: "Web design and development services in Virar",
       link: "/service-details",
     },
     {
-      title: "AI consulting",
+      title: "Paid Advertising",
       content:
         "We guide businesses in adopting AI strategies, optimizing processes, and integrating technologies for lasting success.",
       images: [img11, img11, img11, img11],
+      alt: "Web design and development services in Virar",
       link: "/service-details",
     },
     {
-      title: "AI chatbot virtual",
+      title: "Brand Identity & Design",
       content:
         "We create intelligent chatbots and virtual assistants that improve customer support and automate interactions 24/7.",
       images: [img11, img11, img11, img11],
+      alt: "Web design and development services in Virar",
       link: "/service-details",
     },
     {
-      title: "AI - marketing",
+      title: "Content Creation",
       content:
         "Use AI to target audiences, personalize campaigns, and analyze data for better engagement and results.",
       images: [img07, img07, img07, img07],
+      alt: "Web design and development services in Virar",
       link: "/service-details",
     },
   ];
