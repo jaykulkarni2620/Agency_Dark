@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.70671193.css",
-    "main.js": "/static/js/main.0f391d56.js",
+    "main.js": "/static/js/main.8512bc7b.js",
     "static/js/488.a8472364.chunk.js": "/static/js/488.a8472364.chunk.js",
     "static/media/artificial-intelligence-11761.gif": "/static/media/artificial-intelligence-11761.e2cf0a14ea4a90e85741.gif",
     "static/media/web3.png": "/static/media/web3.212cefc0ed437ce9fe1d.png",
@@ -178,11 +178,11 @@
     "static/media/user-balck-icon.svg": "/static/media/user-balck-icon.502f7a9f42531f390f25cec82665f705.svg",
     "static/media/down-white-icon.svg": "/static/media/down-white-icon.39641759fc268ff2b9910442521d1f15.svg",
     "main.70671193.css.map": "/static/css/main.70671193.css.map",
-    "main.0f391d56.js.map": "/static/js/main.0f391d56.js.map",
+    "main.8512bc7b.js.map": "/static/js/main.8512bc7b.js.map",
     "488.a8472364.chunk.js.map": "/static/js/488.a8472364.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.70671193.css",
-    "static/js/main.0f391d56.js"
+    "static/js/main.8512bc7b.js"
   ]
 }
