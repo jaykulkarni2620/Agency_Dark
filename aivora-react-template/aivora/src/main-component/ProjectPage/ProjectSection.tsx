@@ -36,7 +36,7 @@ const ArrowIcon = () => (
 // PROJECT DATA
 const projectData = [
   {
-    title: "Chatbot and NLP projects..",
+    title: "CNC Machinery Business Website",
     content:
       "We build smart chatbots and NLP tools that understand and respond naturally. From customer support to document analysis, our AI solutions automate communication, save time, and improve user experience.",
     images: [img02, img02, img02, img02],
