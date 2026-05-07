@@ -10,9 +10,9 @@ import img02 from "../../images/blog/Abc.png";
 import img03 from "../../images/blog/ecommerce.png";
 
 export const BLOG_SLUGS = [
-  "seo-guide",
-  "chatbot-vs-human",
-  "ai-ecommerce",
+  "seo-service-virar",
+  "socialmedia-service-virar",
+  "ecommerce-service-virar",
 ] as const;
 
 export type BlogSlug = (typeof BLOG_SLUGS)[number];
@@ -282,8 +282,8 @@ function AiEcommerceBody() {
 }
 
 export const blogPosts: Record<BlogSlug, BlogPost> = {
-  "seo-guide": {
-    slug: "seo-guide",
+  "seo-service-virar": {
+    slug: "seo-service-virar",
     pageTitle: "Local & technical SEO guide",
     pageSub: "SEO",
     metaDescription:
@@ -298,10 +298,10 @@ export const blogPosts: Record<BlogSlug, BlogPost> = {
     },
     body: <SeoGuideBody />,
   },
-  "chatbot-vs-human": {
-    slug: "chatbot-vs-human",
-    pageTitle: "AI chatbots vs human support",
-    pageSub: "Chatbots",
+  "socialmedia-service-virar": {
+    slug: "socialmedia-service-virar",
+    pageTitle: "Grow Your Business with Social Media",
+    pageSub: "Social Media",
     metaDescription:
       "Compare AI chatbots and human support—when to automate, when to escalate, and what to measure.",
     heroImage: img02,
@@ -314,8 +314,8 @@ export const blogPosts: Record<BlogSlug, BlogPost> = {
     },
     body: <ChatbotVsHumanBody />,
   },
-  "ai-ecommerce": {
-    slug: "ai-ecommerce",
+  "ecommerce-service-virar": {
+    slug: "ecommerce-service-virar",
     pageTitle: "AI in eCommerce",
     pageSub: "eCommerce",
     metaDescription:

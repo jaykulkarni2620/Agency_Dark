@@ -1,12 +1,13 @@
 import React from "react";
 
 // ==== Import Images ====
-import img05 from "../../../images/about/img05.jpg";
-import img06 from "../../../images/about/img06.jpg";
-import img07 from "../../../images/about/img07.jpg";
-import img08 from "../../../images/about/img08.jpg";
+import img05 from "../../../images/about/img003.png";
+import img06 from "../../../images/about/img001.png";
+import img07 from "../../../images/about/img004.png";
+import img08 from "../../../images/about/img002.png";
 
 import videoPoster from "../../../images/about/video-img.png";
+import videoFile from "../../../images/video/download.mp4";
 
 import gif1 from "../../../images/icon/original-66948a0d81d.gif";
 import gif2 from "../../../images/icon/0deec720000b2066289b.gif";
@@ -51,15 +52,15 @@ const AboutSection: React.FC = () => {
 
           {/* Video */}
           <div className="xb-video">
-            <video
-              loop
-              muted
-              playsInline
-              autoPlay
-              poster={videoPoster}
-            >
-              <source src="https://www.pexels.com/download/video/18069701/" />
-            </video>
+          <video
+            loop
+            muted
+            playsInline
+            autoPlay
+            poster={videoPoster}
+          >
+            <source src={videoFile} type="video/mp4" />
+          </video>
           </div>
 
           {/* Column 3 */}

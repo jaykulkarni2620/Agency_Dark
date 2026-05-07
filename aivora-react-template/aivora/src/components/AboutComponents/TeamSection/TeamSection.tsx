@@ -11,7 +11,7 @@ import img04 from "../../../images/team/img04.jpg";
 import img05 from "../../../images/team/img05.jpg";
 import img06 from "../../../images/team/img06.jpg";
 import img07 from "../../../images/team/img07.jpg";
-import img08 from "../../../images/team/img08.jpg";
+import img08 from "../../../images/team/graphic.png";
 
 const teamMembers = [
   { name: "Ethan Reynolds", role: "AI Engineer", img: img01 },
@@ -21,7 +21,7 @@ const teamMembers = [
   { name: "Eliana Rose", role: "Intelligence Analyst", img: img05 },
   { name: "Carter Vaughn", role: "AI Project Manager", img: img06 },
   { name: "Logan Pierce", role: "AI Solutions Architect", img: img07 },
-  { name: "Emerson Tate", role: "AI Product Manager", img: img08 },
+  { name: "Harsh Bait", role: "Senior Graphic Designer", img: img08 },
 ];
 
 const TeamSection: React.FC = () => {

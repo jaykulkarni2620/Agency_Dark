@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // IMPORT IMAGES
-import img02 from "../../images/project/img02.jpg";
-import img03 from "../../images/project/img03.jpg";
-import img04 from "../../images/project/img04.jpg";
-import img05 from "../../images/project/img05.jpg";
-import img06 from "../../images/project/img06.jpg";
+import img02 from "../../images/project/0006.png";
+import img03 from "../../images/project/0004.png";
+import img04 from "../../images/project/0002.png";
+import img05 from "../../images/project/0003.png";
+import img06 from "../../images/project/0001.png";
 
 // ARROW ICON SVG
 const ArrowIcon = () => (

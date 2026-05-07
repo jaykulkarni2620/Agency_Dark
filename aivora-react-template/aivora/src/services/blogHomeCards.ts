@@ -13,22 +13,19 @@ export type HomeBlogCard = {
 };
 
 /** Display order on the home blog strip (newest first). */
-const STATIC_HOME_META: Record<
-  BlogSlug,
-  { metaLabel: string; dateLabel: string; sortKey: string }
-> = {
-  "seo-guide": {
-    metaLabel: "ai business tips",
+const STATIC_HOME_META: Record<BlogSlug, { metaLabel: string; dateLabel: string; sortKey: string }> = {
+  "seo-service-virar": {
+    metaLabel: "seo tips",
     dateLabel: "March 24, 2025",
     sortKey: "2025-03-24T12:00:00.000Z",
   },
-  "chatbot-vs-human": {
-    metaLabel: "chatbots tips",
+  "socialmedia-service-virar": {
+    metaLabel: "social media",
     dateLabel: "April 27, 2025",
     sortKey: "2025-04-27T12:00:00.000Z",
   },
-  "ai-ecommerce": {
-    metaLabel: "ai business",
+  "ecommerce-service-virar": {
+    metaLabel: "ecommerce",
     dateLabel: "March 17, 2025",
     sortKey: "2025-03-17T12:00:00.000Z",
   },
@@ -67,6 +64,7 @@ function buildHomeBlogCards(cmsList: CmsBlogPost[]): HomeBlogCard[] {
   (Object.keys(blogPosts) as BlogSlug[]).forEach((slug) => {
     const p = blogPosts[slug];
     const m = STATIC_HOME_META[slug];
+    if (!m) return; // skip slugs not listed in STATIC_HOME_META
     bySlug.set(slug, {
       slug,
       title: p.itemDetails.title,
